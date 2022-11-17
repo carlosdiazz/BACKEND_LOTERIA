@@ -1,9 +1,9 @@
 _id: req_c6bfbbe9e2d4486e93ece06facd32c65
 type: Request
 parentId: fld_9ef045ad01724f5180a750a3b88e67c0
-modified: 1668717989731
+modified: 1668721732223
 created: 1668717562376
-url: "{{ _.URL_BASE }}/juego/2"
+url: "{{ _.URL_BASE }}/juego/5"
 name: getOneJuego
 description: ""
 method: GET

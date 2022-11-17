@@ -1,9 +1,9 @@
 _id: req_54119753cb6248df9e686a3a037fd43f
 type: Request
 parentId: fld_9ef045ad01724f5180a750a3b88e67c0
-modified: 1668718824096
+modified: 1668721479276
 created: 1668717562379
-url: "{{ _.URL_BASE }}/juego/2"
+url: "{{ _.URL_BASE }}/juego/5"
 name: updateJuego
 description: ""
 method: PUT
@@ -11,7 +11,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"descripcion":"El mejor Juego"
+    	"abreviatura":"Gm"
     }
 parameters: []
 headers:

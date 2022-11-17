@@ -1,9 +1,9 @@
 _id: req_7b83a8656b1e41969b325a9829cdecb5
 type: Request
 parentId: fld_9ef045ad01724f5180a750a3b88e67c0
-modified: 1668718017226
+modified: 1668721144781
 created: 1668717562385
-url: "{{ _.URL_BASE }}/juego/2"
+url: "{{ _.URL_BASE }}/juego/4"
 name: deleteJuego
 description: ""
 method: DELETE
