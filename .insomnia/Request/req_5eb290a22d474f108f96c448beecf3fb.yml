@@ -1,0 +1,21 @@
+_id: req_5eb290a22d474f108f96c448beecf3fb
+type: Request
+parentId: fld_8024abbf6d0443db8305a945e6356bbc
+modified: 1668717692262
+created: 1668698534460
+url: "{{ _.URL_BASE }}/loteria/3"
+name: deleteLoteria
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1668698049313.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

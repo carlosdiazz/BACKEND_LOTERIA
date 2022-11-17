@@ -1,0 +1,31 @@
+_id: req_d37f9d0efeae444b9fcf988f5bf04fb0
+type: Request
+parentId: fld_1fe45b2708b14e148f12d5a5448ee701
+modified: 1668718861671
+created: 1668718778379
+url: "{{ _.URL_BASE }}/sorteo"
+name: createSorteo
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"name":"Quiniela FLorida",
+    	"abreviatura":"Fl",
+    "img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
+    	"descripcion":"Florida La Mejor"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1668698031838.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

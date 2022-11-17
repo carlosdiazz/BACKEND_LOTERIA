@@ -1,0 +1,21 @@
+_id: req_6e27f122c0054525a1ce86d0ccc9c1ab
+type: Request
+parentId: fld_1fe45b2708b14e148f12d5a5448ee701
+modified: 1668718873942
+created: 1668718778365
+url: "{{ _.URL_BASE }}/sorteo/2"
+name: getOneSorteo
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1668698154166
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

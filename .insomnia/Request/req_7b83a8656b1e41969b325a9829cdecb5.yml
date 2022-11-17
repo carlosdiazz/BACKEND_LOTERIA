@@ -1,0 +1,21 @@
+_id: req_7b83a8656b1e41969b325a9829cdecb5
+type: Request
+parentId: fld_9ef045ad01724f5180a750a3b88e67c0
+modified: 1668718017226
+created: 1668717562385
+url: "{{ _.URL_BASE }}/juego/2"
+name: deleteJuego
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1668698049313.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

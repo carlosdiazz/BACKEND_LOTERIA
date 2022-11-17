@@ -1,0 +1,21 @@
+_id: req_8b6764fe6cce4ba7b2100abb374cecbe
+type: Request
+parentId: fld_8024abbf6d0443db8305a945e6356bbc
+modified: 1668717664831
+created: 1668698497220
+url: "{{ _.URL_BASE }}/loteria/1"
+name: getOneLoteria
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1668698154166
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

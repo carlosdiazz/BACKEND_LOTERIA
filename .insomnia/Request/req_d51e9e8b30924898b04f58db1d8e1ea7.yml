@@ -1,0 +1,21 @@
+_id: req_d51e9e8b30924898b04f58db1d8e1ea7
+type: Request
+parentId: fld_9ef045ad01724f5180a750a3b88e67c0
+modified: 1668717619336
+created: 1668717562371
+url: "{{ _.URL_BASE }}/juego"
+name: getAllJuego
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1668698293969
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

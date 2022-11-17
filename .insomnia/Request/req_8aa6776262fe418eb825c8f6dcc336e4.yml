@@ -1,0 +1,21 @@
+_id: req_8aa6776262fe418eb825c8f6dcc336e4
+type: Request
+parentId: fld_1fe45b2708b14e148f12d5a5448ee701
+modified: 1668718878126
+created: 1668718778345
+url: "{{ _.URL_BASE }}/sorteo"
+name: getAllSorteo
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1668698293969
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,28 @@
+_id: req_21ac2306818f4c449e675679870a3e14
+type: Request
+parentId: fld_1fe45b2708b14e148f12d5a5448ee701
+modified: 1668718869953
+created: 1668718778372
+url: "{{ _.URL_BASE }}/sorteo/2"
+name: updateSorteo
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"descripcion":"El mejor Juego"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1668698084264.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

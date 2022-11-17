@@ -1,0 +1,28 @@
+_id: req_54119753cb6248df9e686a3a037fd43f
+type: Request
+parentId: fld_9ef045ad01724f5180a750a3b88e67c0
+modified: 1668718824096
+created: 1668717562379
+url: "{{ _.URL_BASE }}/juego/2"
+name: updateJuego
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"descripcion":"El mejor Juego"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1668698084264.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

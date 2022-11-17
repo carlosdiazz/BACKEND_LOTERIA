@@ -1,0 +1,21 @@
+_id: req_941ba50f2e174172a0cf81fb7c92dfb7
+type: Request
+parentId: fld_1fe45b2708b14e148f12d5a5448ee701
+modified: 1668718865849
+created: 1668718778376
+url: "{{ _.URL_BASE }}/sorteo/2"
+name: deleteSorteo
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1668698049313.75
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

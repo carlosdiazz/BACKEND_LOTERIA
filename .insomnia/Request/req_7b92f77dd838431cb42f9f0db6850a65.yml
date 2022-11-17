@@ -1,0 +1,31 @@
+_id: req_7b92f77dd838431cb42f9f0db6850a65
+type: Request
+parentId: fld_9ef045ad01724f5180a750a3b88e67c0
+modified: 1668718828071
+created: 1668717562387
+url: "{{ _.URL_BASE }}/juego"
+name: createJuego
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"name":"Florida",
+    	"abreviatura":"Fl",
+    "img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
+    	"descripcion":"Florida La Mejor",
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1668698031838.375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
