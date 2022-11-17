@@ -4,8 +4,12 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   Entity,
+  ManyToMany,
+  JoinColumn,
+  ManyToOne,
 } from 'typeorm';
 
+import { Loteria } from '../loteria/loteria.entity';
 @Entity({ name: 'juegos' })
 export class Juego {
   @PrimaryGeneratedColumn()
@@ -36,4 +40,8 @@ export class Juego {
     default: () => 'CURRENT_TIMESTAMP',
   })
   updateAt: Date;
+
+  @ManyToOne(() => Loteria, (loteria) => loteria.juegos)
+  @JoinColumn({ name: 'loteria_id' })
+  loteria_id: Loteria;
 }

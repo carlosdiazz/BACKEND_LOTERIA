@@ -1,5 +1,11 @@
+import {
+  IsString,
+  IsUrl,
+  IsNotEmpty,
+  IsNumber,
+  IsPositive,
+} from 'class-validator';
 import { PartialType, ApiProperty } from '@nestjs/swagger';
-import { IsString, IsUrl, IsNotEmpty } from 'class-validator';
 
 export class CreateJuegoDto {
   @IsString()
@@ -22,6 +28,12 @@ export class CreateJuegoDto {
   @IsNotEmpty()
   @ApiProperty({ description: 'Descripcion del Juego' })
   readonly descripcion: string;
+
+  @IsNumber()
+  @IsNotEmpty()
+  @IsPositive()
+  @ApiProperty({ description: 'Clave foreana de la loteria' })
+  readonly loteriaId: number;
 }
 
 export class UpdateJuegoDto extends PartialType(CreateJuegoDto) {}
