@@ -1,7 +1,7 @@
 _id: req_7b92f77dd838431cb42f9f0db6850a65
 type: Request
 parentId: fld_9ef045ad01724f5180a750a3b88e67c0
-modified: 1668721448755
+modified: 1668745276278
 created: 1668717562387
 url: "{{ _.URL_BASE }}/juego"
 name: createJuego
@@ -11,11 +11,12 @@ body:
   mimeType: application/json
   text: >-
     {
-    	"name":"Ganamas Tarde",
-    	"abreviatura":"Fl",
-    "img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
-    	"descripcion":"Florida La Mejor",
-    	"loteriaId":1
+    	"name":"Pick 5 USA",
+    	"abreviatura":"P5-USA",
+    	"img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
+    	"descripcion":"Incluye Pick5 o Loto5 USA",
+    	"posiciones":4,
+    	"digitos":1
     }
 parameters: []
 headers:

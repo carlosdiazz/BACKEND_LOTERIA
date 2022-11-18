@@ -1,10 +1,10 @@
-_id: req_6e27f122c0054525a1ce86d0ccc9c1ab
+_id: req_f4c8151f5f2646e3afb60ff0e6ab56be
 type: Request
-parentId: fld_1fe45b2708b14e148f12d5a5448ee701
-modified: 1668741247148
-created: 1668718778365
-url: "{{ _.URL_BASE }}/sorteo/6376f4dcaac03326c1167fb7"
-name: getOneSorteo
+parentId: fld_1cffe09a15b24ec9bea51dac0cfe0f02
+modified: 1668744135786
+created: 1668744088228
+url: "{{ _.URL_BASE }}/resultados/6376f4dcaac03326c1167fb7"
+name: getOneResultado
 description: ""
 method: GET
 body: {}

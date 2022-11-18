@@ -1,9 +1,9 @@
 _id: req_620f829144da41e1ab6385ea6580cf68
 type: Request
 parentId: fld_8024abbf6d0443db8305a945e6356bbc
-modified: 1668721436108
+modified: 1668737004076
 created: 1668698505753
-url: "{{ _.URL_BASE }}/loteria/1"
+url: "{{ _.URL_BASE }}/loteria/6376e6c79b8370d4a61341a5"
 name: updateLoteria
 description: ""
 method: PUT
@@ -11,7 +11,7 @@ body:
   mimeType: application/json
   text: |-
     {
-    	"abreviatura":"Lot. Nac."
+    	"descripcion":"Real la mejor"
     }
 parameters: []
 headers:

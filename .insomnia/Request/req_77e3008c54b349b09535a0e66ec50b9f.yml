@@ -1,18 +1,17 @@
-_id: req_54119753cb6248df9e686a3a037fd43f
+_id: req_77e3008c54b349b09535a0e66ec50b9f
 type: Request
-parentId: fld_9ef045ad01724f5180a750a3b88e67c0
-modified: 1668738122758
-created: 1668717562379
-url: "{{ _.URL_BASE }}/juego/6376ec028e9d09d875e34437"
-name: updateJuego
+parentId: fld_1cffe09a15b24ec9bea51dac0cfe0f02
+modified: 1668744139605
+created: 1668744088231
+url: "{{ _.URL_BASE }}/resultados/2"
+name: updateResultado
 description: ""
 method: PUT
 body:
   mimeType: application/json
   text: |-
     {
-    	"posiciones":2,
-    	"digitos":1
+    	"descripcion":"El mejor Juego"
     }
 parameters: []
 headers:

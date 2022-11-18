@@ -1,17 +1,17 @@
-_id: req_6e27f122c0054525a1ce86d0ccc9c1ab
+_id: req_cde84297a14243d79f284b0a7c89bbb7
 type: Request
-parentId: fld_1fe45b2708b14e148f12d5a5448ee701
-modified: 1668741247148
-created: 1668718778365
-url: "{{ _.URL_BASE }}/sorteo/6376f4dcaac03326c1167fb7"
-name: getOneSorteo
+parentId: fld_1cffe09a15b24ec9bea51dac0cfe0f02
+modified: 1668744132466
+created: 1668744088223
+url: "{{ _.URL_BASE }}/resultados"
+name: getAllResultado
 description: ""
 method: GET
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1668698154166
+metaSortKey: -1668698293969
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

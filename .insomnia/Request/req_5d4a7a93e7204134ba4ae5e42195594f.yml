@@ -1,17 +1,17 @@
-_id: req_6e27f122c0054525a1ce86d0ccc9c1ab
+_id: req_5d4a7a93e7204134ba4ae5e42195594f
 type: Request
-parentId: fld_1fe45b2708b14e148f12d5a5448ee701
-modified: 1668741247148
-created: 1668718778365
-url: "{{ _.URL_BASE }}/sorteo/6376f4dcaac03326c1167fb7"
-name: getOneSorteo
+parentId: fld_1cffe09a15b24ec9bea51dac0cfe0f02
+modified: 1668745385663
+created: 1668744088234
+url: "{{ _.URL_BASE }}/resultados/637708a2d97adbe966b6c92f"
+name: deleteResultado
 description: ""
-method: GET
+method: DELETE
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1668698154166
+metaSortKey: -1668698049313.75
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,9 +1,9 @@
 _id: req_941ba50f2e174172a0cf81fb7c92dfb7
 type: Request
 parentId: fld_1fe45b2708b14e148f12d5a5448ee701
-modified: 1668718865849
+modified: 1668746129000
 created: 1668718778376
-url: "{{ _.URL_BASE }}/sorteo/2"
+url: "{{ _.URL_BASE }}/sorteo/63770869d97adbe966b6c91a"
 name: deleteSorteo
 description: ""
 method: DELETE

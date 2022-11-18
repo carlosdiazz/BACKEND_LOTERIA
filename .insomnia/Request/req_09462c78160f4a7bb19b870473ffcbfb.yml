@@ -1,7 +1,7 @@
 _id: req_09462c78160f4a7bb19b870473ffcbfb
 type: Request
 parentId: fld_8024abbf6d0443db8305a945e6356bbc
-modified: 1668717658336
+modified: 1668736670426
 created: 1668698293969
 url: "{{ _.URL_BASE }}/loteria"
 name: getAllLoteria

@@ -1,20 +1,20 @@
-_id: req_cf05ed5faa834dfd9ca362612482733c
+_id: req_1ca6fae93668418cbf34fc3c1c41aa22
 type: Request
-parentId: fld_8024abbf6d0443db8305a945e6356bbc
-modified: 1668745145971
-created: 1668698551111
-url: "{{ _.URL_BASE }}/loteria"
-name: createLoteria
+parentId: fld_1cffe09a15b24ec9bea51dac0cfe0f02
+modified: 1668745657233
+created: 1668744088237
+url: "{{ _.URL_BASE }}/resultados"
+name: createResultado
 description: ""
 method: POST
 body:
   mimeType: application/json
-  text: >-
+  text: |-
     {
-    	"name":"New York",
-    	"abreviatura":"Ny",
-    	"img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
-    	"descripcion":"New York La Mejor"
+    	"date":"2022-11-18",
+    	"id_sorteo":"6377087ad97adbe966b6c920",
+    	"id_loteria":"637707add97adbe966b6c902",
+    	"numeros_ganadores":[98,23,23]
     }
 parameters: []
 headers:

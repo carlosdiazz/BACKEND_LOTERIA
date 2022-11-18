@@ -1,9 +1,9 @@
 _id: req_5eb290a22d474f108f96c448beecf3fb
 type: Request
 parentId: fld_8024abbf6d0443db8305a945e6356bbc
-modified: 1668717692262
+modified: 1668745889865
 created: 1668698534460
-url: "{{ _.URL_BASE }}/loteria/3"
+url: "{{ _.URL_BASE }}/loteria/637707add97adbe966b6c902"
 name: deleteLoteria
 description: ""
 method: DELETE
