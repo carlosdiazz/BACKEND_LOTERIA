@@ -5,9 +5,14 @@ import { JuegosService } from './juego.service';
 import { JuegoController } from './juego.controller';
 import { Juego, JuegoSchema } from './juego.entity';
 
+import { Sorteo, SorteoSchema } from '../sorteos/sorteo.entity';
+
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: Juego.name, schema: JuegoSchema }]),
+    MongooseModule.forFeature([
+      { name: Juego.name, schema: JuegoSchema },
+      { name: Sorteo.name, schema: SorteoSchema },
+    ]),
   ],
   controllers: [JuegoController],
   providers: [JuegosService],

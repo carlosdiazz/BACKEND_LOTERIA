@@ -2,9 +2,8 @@ import { PartialType, ApiProperty } from '@nestjs/swagger';
 import {
   IsString,
   IsNotEmpty,
-  IsNumber,
   IsUrl,
-  IsPositive,
+  IsMongoId,
 } from 'class-validator';
 
 export class CreateSorteoDto {
@@ -28,6 +27,18 @@ export class CreateSorteoDto {
   @IsNotEmpty()
   @ApiProperty({ description: 'Descripcion del Sorteo' })
   readonly descripcion: string;
+
+  @IsString()
+  @IsMongoId()
+  @IsNotEmpty()
+  @ApiProperty({ description: 'Id del juego' })
+  readonly id_juego: string;
+
+  @IsString()
+  @IsMongoId()
+  @IsNotEmpty()
+  @ApiProperty({ description: 'Id de la Loteria' })
+  readonly id_loteria: string;
 }
 
 export class UpdateSorteoDto extends PartialType(CreateSorteoDto) {}

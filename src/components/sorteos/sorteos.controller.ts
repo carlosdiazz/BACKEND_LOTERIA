@@ -6,12 +6,12 @@ import {
   Patch,
   Param,
   Delete,
-  ParseIntPipe,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
 
 import { SorteosService } from './sorteos.service';
 import { CreateSorteoDto, UpdateSorteoDto } from './sorteo.dto';
+import { ParseObjectIdPipe } from '../common/parseObjectIdMongo.pipe';
 
 @ApiTags('Sorteo')
 @Controller('sorteo')
@@ -32,14 +32,14 @@ export class SorteosController {
 
   @Get(':id')
   @ApiOperation({ summary: 'Obtener un Sorteo especifico' })
-  findOne(@Param('id', ParseIntPipe) id: number) {
+  findOne(@Param('id', ParseObjectIdPipe) id: string) {
     return this.sorteoService.findOne(id);
   }
 
   @Patch(':id')
   @ApiOperation({ summary: 'Actualizar un Sorteo' })
   update(
-    @Param('id', ParseIntPipe) id: number,
+    @Param('id', ParseObjectIdPipe) id: string,
     @Body() updateSorteoDto: UpdateSorteoDto,
   ) {
     return this.sorteoService.update(id, updateSorteoDto);
@@ -47,7 +47,7 @@ export class SorteosController {
 
   @Delete(':id')
   @ApiOperation({ summary: 'Eliminar un Sorteo' })
-  remove(@Param('id', ParseIntPipe) id: number) {
+  remove(@Param('id', ParseObjectIdPipe) id: string) {
     return this.sorteoService.remove(id);
   }
 }

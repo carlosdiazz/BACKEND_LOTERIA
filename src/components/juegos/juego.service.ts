@@ -1,17 +1,23 @@
-import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
+import {
+  Injectable,
+  NotFoundException,
+  BadRequestException,
+} from '@nestjs/common';
 
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 
 import { CreateJuegoDto, UpdateJuegoDto } from './juego.dto';
-import { Juego, juegoType} from './juego.entity';
+import { Juego, juegoType } from './juego.entity';
+
+import { Sorteo, sorteoType } from '../sorteos/sorteo.entity';
 
 @Injectable()
 export class JuegosService {
   constructor(
     @InjectModel(Juego.name) private juegoModel: Model<juegoType>,
+    @InjectModel(Sorteo.name) private sorteoModel: Model<sorteoType>,
   ) {}
-
 
   async create(data: CreateJuegoDto) {
     try {
@@ -19,7 +25,7 @@ export class JuegosService {
       return await newJuego.save();
     } catch (error) {
       throw new BadRequestException(error.message);
-    };
+    }
   }
 
   async findAll() {
@@ -27,7 +33,7 @@ export class JuegosService {
   }
 
   async findOne(id: string) {
-    const juego = this.juegoModel.findById(id);
+    const juego = await this.juegoModel.findById(id);
     if (!juego) {
       throw new NotFoundException('Este juego no existe');
     }
@@ -43,6 +49,16 @@ export class JuegosService {
 
   async remove(id: string) {
     await this.findOne(id);
+    await this.validarQueNoTengaRelacionesEnSorteo(id);
     return await this.juegoModel.findByIdAndDelete(id);
+  }
+
+  async validarQueNoTengaRelacionesEnSorteo(id: string) {
+    const validar = await this.sorteoModel.find({ id_juego: id });
+    if (validar.length >= 1) {
+      throw new NotFoundException(
+        'No se puede eliminar este Juego, Ya pertenece a Sorteos',
+      );
+    }
   }
 }

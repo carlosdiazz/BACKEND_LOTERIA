@@ -9,10 +9,13 @@ import { Model, FilterQuery } from 'mongoose';
 import { CreateLoteriaDto, UpdateLoteriaDto } from './loteria.dto';
 import { Loteria, loteriaType } from './loteria.entity';
 
+import { Sorteo, sorteoType } from '../sorteos/sorteo.entity';
+
 @Injectable()
 export class LoteriasService {
   constructor(
     @InjectModel(Loteria.name) private loteriaModel: Model<loteriaType>,
+    @InjectModel(Sorteo.name) private sorteoModel: Model<sorteoType>,
   ) {}
 
   async create(data: CreateLoteriaDto) {
@@ -45,6 +48,17 @@ export class LoteriasService {
 
   async remove(id: string) {
     await this.findOne(id);
+    await this.validarQueNoTengaRelacionesEnSorteo(id);
     return await this.loteriaModel.findByIdAndDelete(id);
   }
+
+  async validarQueNoTengaRelacionesEnSorteo(id: string) {
+    const validar = await this.sorteoModel.find({ id_loteria: id });
+    if (validar.length >= 1) {
+      throw new NotFoundException(
+        'No se puede eliminar esta Loteria, Ya pertenece a Sorteos',
+      );
+    }
+  }
+
 }
