@@ -3,7 +3,7 @@ import { CreateResultadoDto, UpdateResultadoDto } from './resultado.dto';
 
 @Injectable()
 export class ResultadosService {
-  create(createResultadoDto: CreateResultadoDto) {
+  create(data: CreateResultadoDto) {
     return 'This action adds a new resultado';
   }
 
@@ -11,15 +11,15 @@ export class ResultadosService {
     return `This action returns all resultados`;
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} resultado`;
   }
 
-  update(id: number, updateResultadoDto: UpdateResultadoDto) {
+  update(id: string, data: UpdateResultadoDto) {
     return `This action updates a #${id} resultado`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} resultado`;
   }
 }

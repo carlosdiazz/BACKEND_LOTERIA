@@ -3,7 +3,7 @@ import {
   Get,
   Post,
   Body,
-  Patch,
+  Put,
   Param,
   Delete,
 } from '@nestjs/common';
@@ -36,7 +36,7 @@ export class SorteosController {
     return this.sorteoService.findOne(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   @ApiOperation({ summary: 'Actualizar un Sorteo' })
   update(
     @Param('id', ParseObjectIdPipe) id: string,
