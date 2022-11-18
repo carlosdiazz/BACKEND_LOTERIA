@@ -3,12 +3,12 @@ import { ConfigType } from '@nestjs/config';
 import { DataSourceOptions } from 'typeorm';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { config } from '../config/config';
+import { config } from '../../config/config';
 
-import { Loteria } from '../components/SQL/loteria/loteria.entity';
-import { Juego } from '../components/SQL/juego/juego.entity';
-import { Sorteo } from '../components/SQL/sorteo/sorteo.entity';
-import { MongoModule } from './mongo.module';
+import { Loteria } from '../../components/SQL/loteria/loteria.entity';
+import { Juego } from '../../components/SQL/juego/juego.entity';
+import { Sorteo } from '../../components/SQL/sorteo/sorteo.entity';
+import { MongoModule } from '../mongo.module';
 
 @Global()
 @Module({
@@ -24,7 +24,7 @@ import { MongoModule } from './mongo.module';
           password: configService.postgres.dbPassword,
           database: configService.postgres.dbName,
           entities: [Loteria, Juego, Sorteo],
-          synchronize: true,
+          synchronize: false,
         } as DataSourceOptions),
     }),
     MongoModule,

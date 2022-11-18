@@ -19,7 +19,12 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "typeorm": "typeorm-ts-node-esm",
+    "migrations:generate": "npm run typeorm migration:generate -- -d src/config/migrations.ts src/database/SQL/migrations/migration",
+    "migrations:run": "npm run typeorm -- migration:run -d src/config/migrations.ts",
+    "migrations:show": "npm run typeorm -- migration:show -d src/config/migrations.ts"
+
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",

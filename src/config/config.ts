@@ -28,11 +28,11 @@ export const validationENV = () => {
   return Joi.object({
     PORT: Joi.number().required(),
 
-    //POSTGRES_DB_NAME: Joi.string().required(),
-    //POSTGRES_DB_PORT: Joi.number().required(),
-    //POSTGRES_DB_USER: Joi.string().required(),
-    //POSTGRES_DB_PASSWORD: Joi.string().required(),
-    //POSTGRES_DB_HOST: Joi.string().required(),
+    POSTGRES_DB_NAME: Joi.string().required(),
+    POSTGRES_DB_PORT: Joi.number().required(),
+    POSTGRES_DB_USER: Joi.string().required(),
+    POSTGRES_DB_PASSWORD: Joi.string().required(),
+    POSTGRES_DB_HOST: Joi.string().required(),
 
     URI_MONGO: Joi.string().required(),
 
