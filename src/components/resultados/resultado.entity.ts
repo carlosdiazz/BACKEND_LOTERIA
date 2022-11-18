@@ -6,7 +6,7 @@ import { Sorteo } from '../sorteos/sorteo.entity';
 
 @Schema({ timestamps: true })
 export class Resultado {
-  @Prop({ required: true, unique: true, type: Date })
+  @Prop({ required: true, type: Date })
   date: Date;
 
   @Prop({ required: true, type: Types.ObjectId, ref: Sorteo.name })

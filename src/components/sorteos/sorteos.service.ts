@@ -12,6 +12,7 @@ import { Sorteo, sorteoType } from './sorteo.entity';
 
 import { Juego, juegoType } from '../juegos/juego.entity';
 import { Loteria, loteriaType } from '../loterias/loteria.entity';
+import { Resultado, resultadoType } from '../resultados/resultado.entity';
 
 @Injectable()
 export class SorteosService {
@@ -19,6 +20,7 @@ export class SorteosService {
     @InjectModel(Sorteo.name) private sorteoModel: Model<sorteoType>,
     @InjectModel(Juego.name) private juegoModel: Model<juegoType>,
     @InjectModel(Loteria.name) private loteriaModel: Model<loteriaType>,
+    @InjectModel(Resultado.name) private resultadoModel: Model<resultadoType>,
   ) {}
 
   async create(data: CreateSorteoDto) {
@@ -72,6 +74,7 @@ export class SorteosService {
 
   async remove(id: string) {
     await this.findOne(id);
+    await this.validarQueNoTengaRelacionesEnResultados(id);
     return await this.sorteoModel.findByIdAndDelete(id);
   }
 
@@ -90,4 +93,14 @@ export class SorteosService {
     }
     return juego;
   }
+
+  async validarQueNoTengaRelacionesEnResultados(id: string) {
+    const validar = await this.resultadoModel.find({ id_sorteo: id });
+    if (validar.length >= 1) {
+      throw new NotFoundException(
+        'No se puede eliminar esta Sorteo, Ya pertenece a un Resultado',
+      );
+    }
+  }
+
 }

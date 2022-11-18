@@ -4,18 +4,20 @@ import {
   BadRequestException,
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model, FilterQuery } from 'mongoose';
+import { Model } from 'mongoose';
 
 import { CreateLoteriaDto, UpdateLoteriaDto } from './loteria.dto';
 import { Loteria, loteriaType } from './loteria.entity';
 
 import { Sorteo, sorteoType } from '../sorteos/sorteo.entity';
+import { Resultado, resultadoType } from '../resultados/resultado.entity';
 
 @Injectable()
 export class LoteriasService {
   constructor(
     @InjectModel(Loteria.name) private loteriaModel: Model<loteriaType>,
     @InjectModel(Sorteo.name) private sorteoModel: Model<sorteoType>,
+    @InjectModel(Resultado.name) private resultadoModel: Model<resultadoType>,
   ) {}
 
   async create(data: CreateLoteriaDto) {
@@ -48,6 +50,7 @@ export class LoteriasService {
 
   async remove(id: string) {
     await this.findOne(id);
+    await this.validarQueNoTengaRelacionesEnResultados(id);
     await this.validarQueNoTengaRelacionesEnSorteo(id);
     return await this.loteriaModel.findByIdAndDelete(id);
   }
@@ -57,6 +60,15 @@ export class LoteriasService {
     if (validar.length >= 1) {
       throw new NotFoundException(
         'No se puede eliminar esta Loteria, Ya pertenece a Sorteos',
+      );
+    }
+  }
+
+  async validarQueNoTengaRelacionesEnResultados(id: string) {
+    const validar = await this.resultadoModel.find({ id_loteria: id });
+    if (validar.length >= 1) {
+      throw new NotFoundException(
+        'No se puede eliminar esta Loteria, Ya pertenece a un Resultado',
       );
     }
   }
