@@ -6,10 +6,15 @@ import { AppService } from './app.service';
 
 import { config, validationENV } from '../config/config';
 
-import { DatabseModule } from '../database/databse.module';
-import { LoteriaModule } from '../components/loteria/loteria.module';
-import { SorteoModule } from '../components/sorteo/sorteo.module';
-import { JuegoModule } from '../components/juego/juego.module';
+//import { DatabseModule } from '../database/databse.module';
+//import { LoteriaModule } from '../components/SQL/loteria/loteria.module';
+//import { SorteoModule } from '../components/SQL/sorteo/sorteo.module';
+//import { JuegoModule } from '../components/SQL/juego/juego.module';
+import { MongoModule } from '../database/mongo.module';
+import { LoteriasModule } from '../components/loterias/loteria.module';
+import { JuegosModule } from '../components/juegos/juego.module';
+import { ResultadosModule } from '../components/resultados/resultados.module';
+import { SorteosModule } from '../components/sorteos/sorteos.module';
 
 @Module({
   imports: [
@@ -18,10 +23,15 @@ import { JuegoModule } from '../components/juego/juego.module';
       isGlobal: true,
       validationSchema: validationENV(),
     }),
-    DatabseModule,
-    LoteriaModule,
-    SorteoModule,
-    JuegoModule,
+    //DatabseModule,
+    //LoteriaModule,
+    //SorteoModule,
+    //JuegoModule,
+    MongoModule,
+    LoteriasModule,
+    JuegosModule,
+    ResultadosModule,
+    SorteosModule
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -12,16 +12,35 @@ export const config = registerAs('config', () => {
       dbPassword: process.env.POSTGRES_DB_PASSWORD,
       dbHost: process.env.POSTGRES_DB_HOST,
     },
+    mongo: {
+      dbUri: process.env.URI_MONGO,
+      //dbName: process.env.MONGO_DB,
+      //dbUser: process.env.MONGO_USER,
+      //dbPassword: process.env.MONGO_PASSWORD,
+      //dbPort: Number(process.env.MONGO_PORT),
+      //dbHost: process.env.MONGO_HOST,
+      //dbConnection: process.env.MONGO_CONNECTION,
+    },
   };
 });
 
 export const validationENV = () => {
   return Joi.object({
     PORT: Joi.number().required(),
-    POSTGRES_DB_NAME: Joi.string().required(),
-    POSTGRES_DB_PORT: Joi.number().required(),
-    POSTGRES_DB_USER: Joi.string().required(),
-    POSTGRES_DB_PASSWORD: Joi.string().required(),
-    POSTGRES_DB_HOST: Joi.string().required(),
+
+    //POSTGRES_DB_NAME: Joi.string().required(),
+    //POSTGRES_DB_PORT: Joi.number().required(),
+    //POSTGRES_DB_USER: Joi.string().required(),
+    //POSTGRES_DB_PASSWORD: Joi.string().required(),
+    //POSTGRES_DB_HOST: Joi.string().required(),
+
+    URI_MONGO: Joi.string().required(),
+
+    //MONGO_DB: Joi.string().required(),
+    //MONGO_USER: Joi.string().required(),
+    //MONGO_PASSWORD: Joi.string().required(),
+    //MONGO_PORT: Joi.number().required(),
+    //MONGO_HOST: Joi.string().required(),
+    //MONGO_CONNECTION: Joi.string().required(),
   });
 };

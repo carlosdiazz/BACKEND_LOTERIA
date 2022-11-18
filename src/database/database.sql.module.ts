@@ -5,9 +5,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { config } from '../config/config';
 
-import { Loteria } from '../components/loteria/loteria.entity';
-import { Juego } from '../components/juego/juego.entity';
-import { Sorteo } from '../components/sorteo/sorteo.entity';
+import { Loteria } from '../components/SQL/loteria/loteria.entity';
+import { Juego } from '../components/SQL/juego/juego.entity';
+import { Sorteo } from '../components/SQL/sorteo/sorteo.entity';
+import { MongoModule } from './mongo.module';
 
 @Global()
 @Module({
@@ -26,6 +27,7 @@ import { Sorteo } from '../components/sorteo/sorteo.entity';
           synchronize: true,
         } as DataSourceOptions),
     }),
+    MongoModule,
   ],
   exports: [TypeOrmModule],
 })
