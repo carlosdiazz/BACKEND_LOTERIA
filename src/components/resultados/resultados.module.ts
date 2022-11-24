@@ -7,6 +7,7 @@ import { Resultado, ResultadoSchema } from './resultado.entity';
 
 import { Sorteo, SorteoSchema } from '../sorteos/sorteo.entity';
 import { Loteria, LoteriaSchema } from '../loterias/loteria.entity';
+import { Juego, JuegoSchema } from '../juegos/juego.entity';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { Loteria, LoteriaSchema } from '../loterias/loteria.entity';
       { name: Resultado.name, schema: ResultadoSchema },
       { name: Sorteo.name, schema: SorteoSchema },
       { name: Loteria.name, schema: LoteriaSchema },
+      { name: Juego.name, schema: JuegoSchema },
     ]),
   ],
   controllers: [ResultadosController],

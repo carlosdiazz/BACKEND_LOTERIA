@@ -31,9 +31,8 @@ export class SorteosService {
 
       const newSorteo = new this.sorteoModel(data);
       return await (
-        await (await newSorteo.save())
-          .populate('id_juego', 'name')
-      )   .populate('id_loteria', 'name');
+        await (await newSorteo.save()).populate('id_juego', 'name')
+      ).populate('id_loteria', 'name');
     } catch (error) {
       throw new BadRequestException(error.message);
     }
@@ -102,5 +101,4 @@ export class SorteosService {
       );
     }
   }
-
 }

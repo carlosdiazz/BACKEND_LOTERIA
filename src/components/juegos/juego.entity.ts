@@ -19,7 +19,16 @@ export class Juego {
   posiciones: number;
 
   @Prop({ required: true })
-  elementos: number;
+  rango_minimo: number;
+
+  @Prop({ required: true })
+  rango_maximo: number;
+
+  //@Prop({ required: true })
+  //elementos_xpath_by_posiciones: number;
+
+  //@Prop({ required: true })
+  //elementos_by_posiciones: number;
 }
 
 export type juegoType = HydratedDocument<Juego>;

@@ -5,8 +5,8 @@ import {
   IsDate,
   IsMongoId,
   IsArray,
-    ArrayMinSize,
-    IsNumber,
+  ArrayMinSize,
+  IsNumber,
 } from 'class-validator';
 
 export class CreateResultadoDto {
@@ -18,15 +18,16 @@ export class CreateResultadoDto {
   @IsMongoId()
   @IsNotEmpty()
   @IsString()
-  @ApiProperty({ description: 'Id del sorteo' })
+  @ApiProperty({ description: 'Id del Sorteo' })
   id_sorteo: string;
 
   @IsMongoId()
   @IsNotEmpty()
   @IsString()
-  @ApiProperty({ description: 'Id de la loteria' })
+  @ApiProperty({ description: 'Id de la Loteria' })
   id_loteria: string;
 
+  //! Agregar una validacion para que se mande numeros mayores que 0
   @IsArray()
   @IsNotEmpty()
   @ArrayMinSize(1)

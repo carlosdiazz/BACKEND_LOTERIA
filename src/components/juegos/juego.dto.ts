@@ -4,6 +4,7 @@ import {
   IsNotEmpty,
   IsNumber,
   IsPositive,
+  Min,
 } from 'class-validator';
 import { PartialType, ApiProperty } from '@nestjs/swagger';
 
@@ -35,11 +36,37 @@ export class CreateJuegoDto {
   @ApiProperty({ description: 'Cuantas posiciones tendra el Juego' })
   readonly posiciones: number;
 
+  //@IsNumber()
+  //@IsNotEmpty()
+  //@IsPositive()
+  //@ApiProperty({
+  //  description: 'Cuantos elementos tendra cada posicion el Juego',
+  //})
+  //readonly elementos_by_posiciones: number;
+
+  //@IsNumber()
+  //@IsNotEmpty()
+  //@IsPositive()
+  //@ApiProperty({
+  //  description: 'Cuantos elementos tendra el XPATH para formar el Juego',
+  //})
+  //readonly elementos_xpath_by_posiciones: number;
+
+  @IsNumber()
+  @IsNotEmpty()
+  @Min(0)
+  @ApiProperty({
+    description: 'Cual es el rango Minimo de numeros por posiciones',
+  })
+  readonly rango_minimo: number;
+
   @IsNumber()
   @IsNotEmpty()
   @IsPositive()
-  @ApiProperty({ description: 'De cuantos elementos son las posiciones' })
-  readonly elementos: number;
+  @ApiProperty({
+    description: 'Cual es el rango Maximo de numeros por posiciones',
+  })
+  readonly rango_maximo: number;
 }
 
 export class UpdateJuegoDto extends PartialType(CreateJuegoDto) {}
