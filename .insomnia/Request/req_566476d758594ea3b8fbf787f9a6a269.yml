@@ -1,8 +1,8 @@
-_id: req_7b92f77dd838431cb42f9f0db6850a65
+_id: req_566476d758594ea3b8fbf787f9a6a269
 type: Request
 parentId: fld_9ef045ad01724f5180a750a3b88e67c0
-modified: 1669228574987
-created: 1668717562387
+modified: 1669317550718
+created: 1669219188021
 url: "{{ _.URL_BASE }}/juego"
 name: createJuego
 description: ""
@@ -11,22 +11,21 @@ body:
   mimeType: application/json
   text: >-
     {
-    	"name":"PICK 3",
-    	"abreviatura":"P3",
+    	"name":"Super Pale USA",
+    	"abreviatura":"SP-USA",
     	"img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
-    	"descripcion":"PICK3 o LOTO3",
-    	"posiciones":3,
+    	"descripcion":"Super Pale RD",
+    	"posiciones":2,
     	"rango_minimo":0,
-    	"rango_maximo":9,
-    	"elementos_xpath_by_posiciones":1
-
+    	"rango_maximo":99,
+    	"elementos_xpath_by_posiciones":2
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
 authentication: {}
-metaSortKey: -1668698031838.375
+metaSortKey: -1668665216331.6875
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

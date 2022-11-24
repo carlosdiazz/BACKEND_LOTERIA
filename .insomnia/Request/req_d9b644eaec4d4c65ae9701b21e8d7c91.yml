@@ -1,17 +1,17 @@
-_id: req_941ba50f2e174172a0cf81fb7c92dfb7
+_id: req_d9b644eaec4d4c65ae9701b21e8d7c91
 type: Request
-parentId: fld_1fe45b2708b14e148f12d5a5448ee701
-modified: 1669228230631
-created: 1668718778376
-url: "{{ _.URL_BASE }}/sorteo/637e663fbb076653a84e9247"
-name: deleteSorteo
+parentId: fld_f5dcae0ed870480e971a714fd5414093
+modified: 1669323536270
+created: 1668796527952
+url: "{{ _.URL_BASE }}/loteria_sql/1"
+name: getOneLoteria
 description: ""
-method: DELETE
+method: GET
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1668698049313.75
+metaSortKey: -1668698154166
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

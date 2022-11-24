@@ -1,17 +1,17 @@
-_id: req_941ba50f2e174172a0cf81fb7c92dfb7
+_id: req_9ddbadad691a415f98584e68b2a36e47
 type: Request
-parentId: fld_1fe45b2708b14e148f12d5a5448ee701
-modified: 1669228230631
-created: 1668718778376
-url: "{{ _.URL_BASE }}/sorteo/637e663fbb076653a84e9247"
-name: deleteSorteo
+parentId: fld_86c6a40f7116427e89c64a6dd45497a3
+modified: 1669323554595
+created: 1668796558863
+url: "{{ _.URL_BASE }}/juego_sql"
+name: getAllJuego
 description: ""
-method: DELETE
+method: GET
 body: {}
 parameters: []
 headers: []
 authentication: {}
-metaSortKey: -1668698049313.75
+metaSortKey: -1668698293969
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

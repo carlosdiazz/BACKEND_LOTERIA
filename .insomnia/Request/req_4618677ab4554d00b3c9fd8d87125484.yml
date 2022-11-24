@@ -1,0 +1,29 @@
+_id: req_4618677ab4554d00b3c9fd8d87125484
+type: Request
+parentId: fld_86c6a40f7116427e89c64a6dd45497a3
+modified: 1669323561662
+created: 1668796558869
+url: "{{ _.URL_BASE }}/juego_sql/6376ec028e9d09d875e34437"
+name: updateJuego
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"posiciones":2,
+    	"digitos":1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1668698084264.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

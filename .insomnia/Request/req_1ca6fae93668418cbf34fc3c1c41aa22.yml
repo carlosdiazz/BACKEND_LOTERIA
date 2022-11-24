@@ -1,7 +1,7 @@
 _id: req_1ca6fae93668418cbf34fc3c1c41aa22
 type: Request
 parentId: fld_1cffe09a15b24ec9bea51dac0cfe0f02
-modified: 1668745657233
+modified: 1669228715053
 created: 1668744088237
 url: "{{ _.URL_BASE }}/resultados"
 name: createResultado
@@ -12,9 +12,9 @@ body:
   text: |-
     {
     	"date":"2022-11-18",
-    	"id_sorteo":"6377087ad97adbe966b6c920",
+    	"id_sorteo":"637e688cebfd9e945c79441c",
     	"id_loteria":"637707add97adbe966b6c902",
-    	"numeros_ganadores":[98,23,23]
+    	"numeros_ganadores":[21,11,0]
     }
 parameters: []
 headers:

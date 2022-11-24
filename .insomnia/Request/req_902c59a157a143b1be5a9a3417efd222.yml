@@ -1,9 +1,9 @@
-_id: req_7b92f77dd838431cb42f9f0db6850a65
+_id: req_902c59a157a143b1be5a9a3417efd222
 type: Request
-parentId: fld_9ef045ad01724f5180a750a3b88e67c0
-modified: 1669228574987
-created: 1668717562387
-url: "{{ _.URL_BASE }}/juego"
+parentId: fld_86c6a40f7116427e89c64a6dd45497a3
+modified: 1669323565967
+created: 1668796558875
+url: "{{ _.URL_BASE }}/juego_sql"
 name: createJuego
 description: ""
 method: POST
@@ -11,15 +11,12 @@ body:
   mimeType: application/json
   text: >-
     {
-    	"name":"PICK 3",
-    	"abreviatura":"P3",
+    	"name":"Pick 5 USA",
+    	"abreviatura":"P5-USA",
     	"img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
-    	"descripcion":"PICK3 o LOTO3",
-    	"posiciones":3,
-    	"rango_minimo":0,
-    	"rango_maximo":9,
-    	"elementos_xpath_by_posiciones":1
-
+    	"descripcion":"Incluye Pick5 o Loto5 USA",
+    	"posiciones":4,
+    	"digitos":1
     }
 parameters: []
 headers:

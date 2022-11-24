@@ -1,9 +1,9 @@
 _id: req_5d4a7a93e7204134ba4ae5e42195594f
 type: Request
 parentId: fld_1cffe09a15b24ec9bea51dac0cfe0f02
-modified: 1668745385663
+modified: 1669228218840
 created: 1668744088234
-url: "{{ _.URL_BASE }}/resultados/637708a2d97adbe966b6c92f"
+url: "{{ _.URL_BASE }}/resultados/637e660bbb076653a84e923f"
 name: deleteResultado
 description: ""
 method: DELETE

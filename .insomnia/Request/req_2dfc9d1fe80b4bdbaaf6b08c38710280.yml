@@ -1,0 +1,28 @@
+_id: req_2dfc9d1fe80b4bdbaaf6b08c38710280
+type: Request
+parentId: fld_f5dcae0ed870480e971a714fd5414093
+modified: 1669323541784
+created: 1668796527956
+url: "{{ _.URL_BASE }}/loteria_sql/6376e6c79b8370d4a61341a5"
+name: updateLoteria
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"descripcion":"Real la mejor"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1668698084264.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,25 +1,22 @@
-_id: req_7b92f77dd838431cb42f9f0db6850a65
+_id: req_edb0e7ac179d423eb0f86293fe48f5e5
 type: Request
-parentId: fld_9ef045ad01724f5180a750a3b88e67c0
-modified: 1669228574987
-created: 1668717562387
-url: "{{ _.URL_BASE }}/juego"
-name: createJuego
+parentId: fld_6523011a10f046e1b3d25a0e57e36a28
+modified: 1669323599041
+created: 1668796581145
+url: "{{ _.URL_BASE }}/sorteo_sql"
+name: createSorteo
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: >-
     {
-    	"name":"PICK 3",
-    	"abreviatura":"P3",
+    	"name":"Florida Noche Tradicional",
+    	"abreviatura":"FL-PM-QPT",
     	"img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
-    	"descripcion":"PICK3 o LOTO3",
-    	"posiciones":3,
-    	"rango_minimo":0,
-    	"rango_maximo":9,
-    	"elementos_xpath_by_posiciones":1
-
+    	"descripcion":"Sorteo de la noche numeros Tradicioanles",
+    	"id_juego":"637707fcd97adbe966b6c909",
+    	"id_loteria":"637707add97adbe966b6c902"
     }
 parameters: []
 headers:

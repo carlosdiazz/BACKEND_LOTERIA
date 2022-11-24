@@ -1,25 +1,20 @@
-_id: req_7b92f77dd838431cb42f9f0db6850a65
+_id: req_def21e0741774658a981df0b0f431b37
 type: Request
-parentId: fld_9ef045ad01724f5180a750a3b88e67c0
-modified: 1669228574987
-created: 1668717562387
-url: "{{ _.URL_BASE }}/juego"
-name: createJuego
+parentId: fld_f5dcae0ed870480e971a714fd5414093
+modified: 1669323546808
+created: 1668796527962
+url: "{{ _.URL_BASE }}/loteria_sql"
+name: createLoteria
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: >-
     {
-    	"name":"PICK 3",
-    	"abreviatura":"P3",
+    	"name":"New York",
+    	"abreviatura":"Ny",
     	"img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
-    	"descripcion":"PICK3 o LOTO3",
-    	"posiciones":3,
-    	"rango_minimo":0,
-    	"rango_maximo":9,
-    	"elementos_xpath_by_posiciones":1
-
+    	"descripcion":"New York La Mejor"
     }
 parameters: []
 headers:

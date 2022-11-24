@@ -1,7 +1,7 @@
 _id: req_d37f9d0efeae444b9fcf988f5bf04fb0
 type: Request
 parentId: fld_1fe45b2708b14e148f12d5a5448ee701
-modified: 1668745336173
+modified: 1669228681695
 created: 1668718778379
 url: "{{ _.URL_BASE }}/sorteo"
 name: createSorteo
@@ -11,11 +11,11 @@ body:
   mimeType: application/json
   text: >-
     {
-    	"name":"Florida Noche Tradicional",
+    	"name":"Florida Noche TRADICIONALES",
     	"abreviatura":"FL-PM-QPT",
     	"img_url":"https://i.pinimg.com/736x/a4/7c/53/a47c533f3580fef43de8502394a4e03f.jpg",
-    	"descripcion":"Sorteo de la noche numeros Tradicioanles",
-    	"id_juego":"637707fcd97adbe966b6c909",
+    	"descripcion":"Sorteo de la noche TRADICIONALES",
+    	"id_juego":"637e67ffebfd9e945c7943f8",
     	"id_loteria":"637707add97adbe966b6c902"
     }
 parameters: []

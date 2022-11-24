@@ -1,10 +1,10 @@
-_id: req_941ba50f2e174172a0cf81fb7c92dfb7
+_id: req_48fde6a2288d4c46b707af8727640242
 type: Request
-parentId: fld_1fe45b2708b14e148f12d5a5448ee701
-modified: 1669228230631
-created: 1668718778376
-url: "{{ _.URL_BASE }}/sorteo/637e663fbb076653a84e9247"
-name: deleteSorteo
+parentId: fld_86c6a40f7116427e89c64a6dd45497a3
+modified: 1669323563426
+created: 1668796558873
+url: "{{ _.URL_BASE }}/juego_sql/6376ebe28e9d09d875e34433"
+name: deleteJuego
 description: ""
 method: DELETE
 body: {}
