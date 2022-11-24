@@ -14,7 +14,7 @@ import { SorteoService } from './sorteo.service';
 import { CreateSorteoDto, UpdateSorteoDto } from './sorteo.dto';
 
 @ApiTags('Sorteo')
-@Controller('sorteo')
+@Controller('sorteo_sql')
 export class SorteoController {
   constructor(private readonly sorteoService: SorteoService) {}
 

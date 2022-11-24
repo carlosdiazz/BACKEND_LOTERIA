@@ -14,7 +14,7 @@ import { JuegoService } from './juego.service';
 import { CreateJuegoDto, UpdateJuegoDto } from './juego.dto';
 
 @ApiTags('Juego')
-@Controller('juego')
+@Controller('juego_sql')
 export class JuegoController {
   constructor(private readonly juegoService: JuegoService) {}
 

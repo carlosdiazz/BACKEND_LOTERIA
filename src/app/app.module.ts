@@ -7,10 +7,10 @@ import { AppService } from './app.service';
 import { config, validationENV } from '../config/config';
 
 //! Componentes con SQL
-//import { DatabseModule } from '../database/SQL/database.sql.module';
-//import { LoteriaModule } from '../components/SQL/loteria/loteria.module';
-//import { SorteoModule } from '../components/SQL/sorteo/sorteo.module';
-//import { JuegoModule } from '../components/SQL/juego/juego.module';
+import { DatabseModule } from '../database/SQL/database.sql.module';
+import { LoteriaModuleSql } from '../components/SQL/loteria/loteria.module';
+import { SorteoModuleSql } from '../components/SQL/sorteo/sorteo.module';
+import { JuegoModuleSql } from '../components/SQL/juego/juego.module';
 
 //! Componentes con MONGO
 import { MongoModule } from '../database/mongo.module';
@@ -26,10 +26,10 @@ import { SorteosModule } from '../components/sorteos/sorteos.module';
       isGlobal: true,
       validationSchema: validationENV(),
     }),
-    //DatabseModule,
-    //LoteriaModule,
-    //SorteoModule,
-    //JuegoModule,
+    DatabseModule,
+    LoteriaModuleSql,
+    SorteoModuleSql,
+    JuegoModuleSql,
 
     MongoModule,
     LoteriasModule,

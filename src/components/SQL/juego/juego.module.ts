@@ -12,4 +12,4 @@ import { Loteria } from '../loteria/loteria.entity';
   controllers: [JuegoController],
   providers: [JuegoService],
 })
-export class JuegoModule {}
+export class JuegoModuleSql {}

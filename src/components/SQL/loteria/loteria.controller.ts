@@ -14,7 +14,7 @@ import { LoteriaService } from './loteria.service';
 import { CreateLoteriaDto, UpdateLoteriaDto } from './loteria.dto';
 
 @ApiTags('Loteria')
-@Controller('loteria')
+@Controller('loteria_sql')
 export class LoteriaController {
   constructor(private readonly loteriaService: LoteriaService) {}
 

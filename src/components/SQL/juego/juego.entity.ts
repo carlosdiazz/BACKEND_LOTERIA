@@ -44,4 +44,13 @@ export class Juego {
   @ManyToOne(() => Loteria, (loteria) => loteria.juegos)
   @JoinColumn({ name: 'loteria_id' })
   loteria_id: Loteria;
+
+  @Column({ type: 'int' })
+  posiciones: number;
+
+  @Column({ type: 'int' })
+  rango_minimo: number;
+
+  @Column({ type: 'int' })
+  rango_maximo: number;
 }

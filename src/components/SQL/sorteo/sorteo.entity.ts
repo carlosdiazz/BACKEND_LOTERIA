@@ -36,4 +36,7 @@ export class Sorteo {
     default: () => 'CURRENT_TIMESTAMP',
   })
   updateAt: Date;
+
+  @Column({ type: 'varchar' })
+  comentarios: string;
 }

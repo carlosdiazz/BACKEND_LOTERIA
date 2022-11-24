@@ -75,3 +75,20 @@ Nest is [MIT licensed](LICENSE).
 ## Comandos utilziados
 
 
+## Generar Migraciones
+### Generar Migraciones, primera vez
+
+npm run typeorm:generate-migration --name=CreatePost
+
+
+### Correr la migracion
+npm run typeorm:run-migrations
+
+## Generar nueva migracion
+npm run typeorm:generate-migration --name=add-Colum-juego
+
+## Generar un revert de la migracion
+npm run typeorm:revert-migration
+
+## Generar Seed
+npm run seed:config

@@ -25,10 +25,17 @@ import { MongoModule } from '../mongo.module';
           database: configService.postgres.dbName,
           entities: [Loteria, Juego, Sorteo],
           synchronize: false,
+          //!/**/*{.ts,.js}"
+          //seeds: ['../../database/SQL/seeding/initialSeed.ts'],
+          //factories: ['../../database/SQL/seeding/loteria.factory.ts'],
         } as DataSourceOptions),
     }),
     MongoModule,
   ],
-  exports: [TypeOrmModule],
+  exports: [
+    TypeOrmModule,
+    //'src/database/SQL/seeding/initialSeed.ts',
+    //'src/database/SQL/seeding/loteria.factory.ts',
+  ],
 })
 export class DatabseModule {}

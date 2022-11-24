@@ -10,4 +10,4 @@ import { Sorteo } from './sorteo.entity';
   controllers: [SorteoController],
   providers: [SorteoService],
 })
-export class SorteoModule {}
+export class SorteoModuleSql {}
