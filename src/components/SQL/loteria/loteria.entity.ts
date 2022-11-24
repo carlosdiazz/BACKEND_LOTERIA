@@ -25,9 +25,6 @@ export class Loteria {
   @Column({ type: 'varchar' })
   descripcion: string;
 
-  @Column({ type: 'varchar', nullable: true })
-  prueba_leni!: string | null;
-
   @CreateDateColumn({
     name: 'create_at',
     type: 'timestamptz',

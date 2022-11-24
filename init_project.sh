@@ -7,7 +7,7 @@ pnpm i
 sleep 10
 if [ ! -f ./src/database/SQL/migrations/*.ts ];
 then
-  echo "Generarnado Migrations..."
+  echo "Generando la Primera Migrations..."
   npm run typeorm:generate-migration --name=first_migrations
 fi
 

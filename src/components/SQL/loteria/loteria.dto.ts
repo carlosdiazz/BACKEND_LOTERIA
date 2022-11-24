@@ -22,11 +22,6 @@ export class CreateLoteriaDto {
   @IsNotEmpty()
   @ApiProperty({ description: 'Descripcion de la Loteria' })
   readonly descripcion: string;
-
-  @IsString()
-  @IsNotEmpty()
-  @ApiProperty({ description: 'Prueba Leni de la Loteria' })
-  readonly prueba_leni: string;
 }
 
 export class UpdateLoteriaDto extends PartialType(CreateLoteriaDto) {}
