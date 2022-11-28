@@ -19,6 +19,10 @@ import { JuegosModule } from '../components/juegos/juego.module';
 import { ResultadosModule } from '../components/resultados/resultados.module';
 import { SorteosModule } from '../components/sorteos/sorteos.module';
 
+//! Componentes Auth
+import { UserModule } from '../components/SQL/user/user.module';
+import { AuthModule } from '../auth/auth.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -36,6 +40,9 @@ import { SorteosModule } from '../components/sorteos/sorteos.module';
     JuegosModule,
     ResultadosModule,
     SorteosModule,
+
+    UserModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

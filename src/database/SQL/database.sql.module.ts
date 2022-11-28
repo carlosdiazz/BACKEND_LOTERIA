@@ -8,6 +8,8 @@ import { config } from '../../config/config';
 import { Loteria } from '../../components/SQL/loteria/loteria.entity';
 import { Juego } from '../../components/SQL/juego/juego.entity';
 import { Sorteo } from '../../components/SQL/sorteo/sorteo.entity';
+import { User } from '../../components/SQL/user/user.entity';
+
 import { MongoModule } from '../mongo.module';
 
 @Global()
@@ -23,7 +25,7 @@ import { MongoModule } from '../mongo.module';
           username: configService.postgres.dbUser,
           password: configService.postgres.dbPassword,
           database: configService.postgres.dbName,
-          entities: [Loteria, Juego, Sorteo],
+          entities: [Loteria, Juego, Sorteo, User],
           synchronize: false,
           //!/**/*{.ts,.js}"
           //seeds: ['../../database/SQL/seeding/initialSeed.ts'],
