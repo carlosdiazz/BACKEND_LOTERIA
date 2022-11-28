@@ -5,6 +5,7 @@ dotenv.config();
 
 export const config = registerAs('config', () => {
   return {
+    JWT_SECRET: process.env.JWT_SECRET,
     postgres: {
       dbName: process.env.POSTGRES_DB_NAME,
       dbPort: Number(process.env.POSTGRES_DB_PORT),
@@ -26,6 +27,7 @@ export const config = registerAs('config', () => {
 
 export const validationENV = () => {
   return Joi.object({
+    JWT_SECRET: Joi.string().required(),
     PORT: Joi.number().required(),
 
     POSTGRES_DB_NAME: Joi.string().required(),

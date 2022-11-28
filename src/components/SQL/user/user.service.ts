@@ -52,4 +52,15 @@ export class UserService {
     await this.findOne(id);
     return this.userRepo.delete(id);
   }
+
+  async findByNickName(nickName: string) {
+    const user = await this.userRepo.findOne({
+      where: { nickName },
+      select: ['firstName', 'lastName', 'nickName', 'email', 'id', 'password'],
+    });
+    if (!user) {
+      throw new NotFoundException('Este usuario no existe');
+    }
+    return user;
+  }
 }
