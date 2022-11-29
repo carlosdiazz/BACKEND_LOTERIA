@@ -2,6 +2,7 @@
 import { define } from 'typeorm-seeding';
 
 import { User } from '../../components/SQL/user/user.entity';
+import { Role } from '../../auth/models/roles.model';
 
 define(User,  () => {
   const user = new User();
@@ -11,6 +12,7 @@ define(User,  () => {
     user.firstName = 'Admin'
     user.lastName = 'Admin'
     user.password = '12345678'
+    user.role = Role.ADMIN
 
   return user;
 });
