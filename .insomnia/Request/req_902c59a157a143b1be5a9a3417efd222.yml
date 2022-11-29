@@ -1,7 +1,7 @@
 _id: req_902c59a157a143b1be5a9a3417efd222
 type: Request
 parentId: fld_86c6a40f7116427e89c64a6dd45497a3
-modified: 1669323565967
+modified: 1669731478677
 created: 1668796558875
 url: "{{ _.URL_BASE }}/juego_sql"
 name: createJuego
@@ -22,7 +22,9 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-authentication: {}
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoyLCJyb2xlIjoiVVNVQVJJTyIsImlhdCI6MTY2OTczMTQ2NSwiZXhwIjoxNjY5NzMxNzY1fQ.MrwYZIFq03201Tt3AFvTHwcwJVBr9xIOHfqgCIXuvHM
 metaSortKey: -1668698031838.375
 isPrivate: false
 settingStoreCookies: true

@@ -1,16 +1,18 @@
 _id: req_e99a04087bd14508ab9941fa4ac75c6f
 type: Request
 parentId: fld_f5dcae0ed870480e971a714fd5414093
-modified: 1669323543847
+modified: 1669727962730
 created: 1668796527959
-url: "{{ _.URL_BASE }}/loteria_sql/637707add97adbe966b6c902"
+url: "{{ _.URL_BASE }}/loteria_sql/2"
 name: deleteLoteria
 description: ""
 method: DELETE
 body: {}
 parameters: []
 headers: []
-authentication: {}
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Njk3Mjc5MjQsImV4cCI6MTY2OTcyODIyNH0.gOJ4nbLSbTrxz-rkPKwJw3kQaePvghxo8n5gLEh8uyU
 metaSortKey: -1668698049313.75
 isPrivate: false
 settingStoreCookies: true
