@@ -1,0 +1,28 @@
+_id: req_f6301032aa1c480c91b75eb4c96f9d85
+type: Request
+parentId: fld_69a1a5bf21ab4f80b6840f2ca89fbb43
+modified: 1669668492364
+created: 1669665610901
+url: "{{ _.URL_BASE }}/user/2"
+name: UpdateUser
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nickName":"carloss"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669664584184
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

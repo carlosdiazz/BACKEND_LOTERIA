@@ -1,0 +1,32 @@
+_id: req_c88ec70834fb4340ad3757be702489f2
+type: Request
+parentId: fld_69a1a5bf21ab4f80b6840f2ca89fbb43
+modified: 1669670161705
+created: 1669665657245
+url: "{{ _.URL_BASE }}/user"
+name: createUser
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"firstName":"Carlos",
+    	"lastName":"Diaz",
+    	"nickName":"carlos",
+    	"email":"c.diazadrian@gmail.com",
+    	"password":"1234"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1669664377725.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
