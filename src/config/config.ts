@@ -1,7 +1,7 @@
 import { registerAs } from '@nestjs/config';
 import * as Joi from 'joi';
-import * as dotenv from 'dotenv';
-dotenv.config();
+//import * as dotenv from 'dotenv';
+//dotenv.config();
 
 export const config = registerAs('config', () => {
   return {

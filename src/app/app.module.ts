@@ -23,9 +23,11 @@ import { SorteosModule } from '../components/sorteos/sorteos.module';
 import { UserModule } from '../components/SQL/user/user.module';
 import { AuthModule } from '../auth/auth.module';
 
+import { enviroments} from '../config/enviroments';
 @Module({
   imports: [
     ConfigModule.forRoot({
+      envFilePath: enviroments[process.env.NODE_ENV] || '.env',
       load: [config],
       isGlobal: true,
       validationSchema: validationENV(),
