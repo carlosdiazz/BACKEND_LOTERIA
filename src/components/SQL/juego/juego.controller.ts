@@ -7,12 +7,18 @@ import {
   Param,
   Delete,
   ParseIntPipe,
+  UseGuards,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
+//import { AuthGuard } from '@nestjs/passport';
 
 import { JuegoService } from './juego.service';
 import { CreateJuegoDto, UpdateJuegoDto } from './juego.dto';
+import { JwtAuthGuard } from '../../../auth/guards/jwt-auth.guard';
+import { Public } from '../../../auth/decorators/public.decorator';
 
+//@UseGuards(AuthGuard('jwt'))
+@UseGuards(JwtAuthGuard)
 @ApiTags('Juego')
 @Controller('juego_sql')
 export class JuegoController {
@@ -24,12 +30,14 @@ export class JuegoController {
     return this.juegoService.create(createJuegoDto);
   }
 
+  @Public()
   @Get()
   @ApiOperation({ summary: 'Obtener todos los Juego' })
   findAll() {
     return this.juegoService.findAll();
   }
 
+  @Public()
   @Get(':id')
   @ApiOperation({ summary: 'Obetner un Juego especifico' })
   findOne(@Param('id', ParseIntPipe) id: number) {

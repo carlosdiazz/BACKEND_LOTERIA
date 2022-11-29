@@ -3,16 +3,22 @@ import {
   Get,
   Post,
   Body,
-  Patch,
+  Put,
   Param,
   Delete,
   ParseIntPipe,
+  UseGuards,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
+//import { AuthGuard } from '@nestjs/passport';
 
+import { JwtAuthGuard } from '../../../auth/guards/jwt-auth.guard';
 import { SorteoService } from './sorteo.service';
 import { CreateSorteoDto, UpdateSorteoDto } from './sorteo.dto';
+import { Public } from '../../../auth/decorators/public.decorator';
 
+//@UseGuards(AuthGuard('jwt'))
+@UseGuards(JwtAuthGuard)
 @ApiTags('Sorteo')
 @Controller('sorteo_sql')
 export class SorteoController {
@@ -24,19 +30,21 @@ export class SorteoController {
     return this.sorteoService.create(createSorteoDto);
   }
 
+  @Public()
   @Get()
   @ApiOperation({ summary: 'Obtener todos los Sorteo' })
   findAll() {
     return this.sorteoService.findAll();
   }
 
+  @Public()
   @Get(':id')
   @ApiOperation({ summary: 'Obtener un Sorteo especifico' })
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.sorteoService.findOne(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   @ApiOperation({ summary: 'Actualizar un Sorteo' })
   update(
     @Param('id', ParseIntPipe) id: number,

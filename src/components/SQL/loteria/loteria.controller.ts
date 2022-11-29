@@ -7,12 +7,17 @@ import {
   Param,
   Delete,
   ParseIntPipe,
+  UseGuards,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
+//import { AuthGuard } from '@nestjs/passport';
 
+import { JwtAuthGuard } from '../../../auth/guards/jwt-auth.guard';
 import { LoteriaService } from './loteria.service';
 import { CreateLoteriaDto, UpdateLoteriaDto } from './loteria.dto';
-
+import { Public } from '../../../auth/decorators/public.decorator';
+//@UseGuards(AuthGuard('jwt'))
+@UseGuards(JwtAuthGuard)
 @ApiTags('Loteria')
 @Controller('loteria_sql')
 export class LoteriaController {
@@ -25,12 +30,14 @@ export class LoteriaController {
   }
 
   @Get()
+  @Public()
   @ApiOperation({ summary: 'Obtener todas las Loteria' })
   findAll() {
     return this.loteriaService.findAll();
   }
 
   @Get(':id')
+  @Public()
   @ApiOperation({ summary: 'Obtener una Loteria especifica' })
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.loteriaService.findOne(id);

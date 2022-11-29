@@ -4,7 +4,7 @@ import { JwtService } from '@nestjs/jwt';
 
 import { User } from '../components/SQL/user/user.entity';
 import { UserService } from '../components/SQL/user/user.service';
-import { PayloadToken } from './token.model';
+import { PayloadToken } from './models/token.model';
 
 @Injectable()
 export class AuthService {
@@ -21,7 +21,7 @@ export class AuthService {
     }
     if (user && isPassword) {
       const { password, ...data } = user;
-      return user; //!Verificar
+      return data; //!Verificar
     }
     return null;
   }
