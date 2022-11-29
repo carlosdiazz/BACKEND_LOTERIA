@@ -1,4 +1,9 @@
-import { CanActivate, ExecutionContext, Injectable, UnauthorizedException } from '@nestjs/common';
+import {
+  CanActivate,
+  ExecutionContext,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { Reflector } from '@nestjs/core';
 
@@ -6,16 +11,14 @@ import { Role } from '../models/roles.model';
 import { PayloadToken } from '../models/token.model';
 import { ROLES_KEY } from '../decorators/roles.decorator';
 
-
 @Injectable()
 export class RolesGuard implements CanActivate {
-  constructor(private reflector: Reflector) { }
-  
+  constructor(private reflector: Reflector) {}
+
   canActivate(
     context: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
-
-    const roles = this.reflector.get<Role[]>(ROLES_KEY, context.getHandler())
+    const roles = this.reflector.get<Role[]>(ROLES_KEY, context.getHandler());
     if (!roles) {
       return true;
     }

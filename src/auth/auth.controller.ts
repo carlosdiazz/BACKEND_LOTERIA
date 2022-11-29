@@ -3,7 +3,7 @@ import { Request } from 'express';
 import { AuthGuard } from '@nestjs/passport';
 
 import { AuthService } from './auth.service';
-import { User} from '../components/SQL/user/user.entity';
+import { User } from '../components/SQL/user/user.entity';
 @Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
@@ -15,6 +15,5 @@ export class AuthController {
     //return req.user;
     const user = req.user as User;
     return this.authService.generatejwt(user);
-
   }
 }

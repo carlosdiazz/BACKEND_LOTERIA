@@ -15,7 +15,7 @@ import { ApiTags, ApiOperation } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../../../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../../../auth/guards/roles.guard';
 
-import { Role} from '../../../auth/models/roles.model';
+import { Role } from '../../../auth/models/roles.model';
 
 import { LoteriaService } from './loteria.service';
 import { CreateLoteriaDto, UpdateLoteriaDto } from './loteria.dto';

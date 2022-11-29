@@ -23,7 +23,7 @@ import { SorteosModule } from '../components/sorteos/sorteos.module';
 import { UserModule } from '../components/SQL/user/user.module';
 import { AuthModule } from '../auth/auth.module';
 
-import { enviroments} from '../config/enviroments';
+import { enviroments } from '../config/enviroments';
 @Module({
   imports: [
     ConfigModule.forRoot({
