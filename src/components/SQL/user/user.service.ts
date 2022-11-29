@@ -27,7 +27,7 @@ export class UserService {
 
   async findAll() {
     return await this.userRepo.find({
-      select: ['firstName', 'lastName', 'nickName', 'email', 'id'],
+      select: ['firstName', 'lastName', 'nickName', 'email', 'id', 'role'],
     });
   }
 
@@ -50,13 +50,14 @@ export class UserService {
 
   async remove(id: number) {
     await this.findOne(id);
-    return this.userRepo.delete(id);
+    await this.userRepo.delete(id);
+    return { Message: "Usuario Eliminado"}
   }
 
   async findByNickName(nickName: string) {
     const user = await this.userRepo.findOne({
       where: { nickName },
-      select: ['firstName', 'lastName', 'nickName', 'email', 'id', 'password'],
+      select: ['firstName', 'lastName', 'nickName', 'email', 'id', 'password', 'role'],
     });
     if (!user) {
       throw new NotFoundException('Este usuario no existe');

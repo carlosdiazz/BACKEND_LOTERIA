@@ -13,16 +13,22 @@ import { ApiTags, ApiOperation } from '@nestjs/swagger';
 //import { AuthGuard } from '@nestjs/passport';
 
 import { JwtAuthGuard } from '../../../auth/guards/jwt-auth.guard';
+import { RolesGuard } from '../../../auth/guards/roles.guard';
+
+import { Role} from '../../../auth/models/roles.model';
+
 import { LoteriaService } from './loteria.service';
 import { CreateLoteriaDto, UpdateLoteriaDto } from './loteria.dto';
 import { Public } from '../../../auth/decorators/public.decorator';
+import { Roles } from '../../../auth/decorators/roles.decorator';
 //@UseGuards(AuthGuard('jwt'))
-@UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard, RolesGuard)
 @ApiTags('Loteria')
 @Controller('loteria_sql')
 export class LoteriaController {
   constructor(private readonly loteriaService: LoteriaService) {}
 
+  @Roles(Role.ADMIN)
   @Post()
   @ApiOperation({ summary: 'Crear una Loteria' })
   create(@Body() createLoteriaDto: CreateLoteriaDto) {
