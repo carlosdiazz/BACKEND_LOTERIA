@@ -1,10 +1,5 @@
 import { PartialType, ApiProperty } from '@nestjs/swagger';
-import {
-  IsString,
-  IsNotEmpty,
-  IsUrl,
-  IsMongoId,
-} from 'class-validator';
+import { IsString, IsNotEmpty, IsUrl, IsMongoId } from 'class-validator';
 
 export class CreateSorteoDto {
   @IsString()
