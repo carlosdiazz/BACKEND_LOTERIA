@@ -17,8 +17,8 @@ export class UserService {
   async create(data: CreateUserDto) {
     try {
       const newUser = this.userRepo.create(data);
-      const hashPassword = await bcrypt.hash(newUser.password, 10);
-      newUser.password = hashPassword;
+      //const hashPassword = await bcrypt.hash(newUser.password, 10);
+      //newUser.password = hashPassword;
       return await this.userRepo.save(newUser);
     } catch (error) {
       throw new BadRequestException(`${error.message || 'Unexpected Error'}'`);
