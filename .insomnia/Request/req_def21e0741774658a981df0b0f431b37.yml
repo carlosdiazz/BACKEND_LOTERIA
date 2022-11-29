@@ -1,7 +1,7 @@
 _id: req_def21e0741774658a981df0b0f431b37
 type: Request
 parentId: fld_f5dcae0ed870480e971a714fd5414093
-modified: 1669323546808
+modified: 1669694701393
 created: 1668796527962
 url: "{{ _.URL_BASE }}/loteria_sql"
 name: createLoteria
@@ -20,7 +20,9 @@ parameters: []
 headers:
   - name: Content-Type
     value: application/json
-authentication: {}
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxOCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjY5NjkzODg3LCJleHAiOjE2Njk2OTQxODd9.clUFMYolL-ZXVAtlRRNYsW6zBk-bGXJY8_2WvZ7qArA
 metaSortKey: -1668698031838.375
 isPrivate: false
 settingStoreCookies: true

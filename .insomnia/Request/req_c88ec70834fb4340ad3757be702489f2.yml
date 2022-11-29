@@ -1,7 +1,7 @@
 _id: req_c88ec70834fb4340ad3757be702489f2
 type: Request
 parentId: fld_69a1a5bf21ab4f80b6840f2ca89fbb43
-modified: 1669670161705
+modified: 1669693878414
 created: 1669665657245
 url: "{{ _.URL_BASE }}/user"
 name: createUser
@@ -12,16 +12,19 @@ body:
   text: |-
     {
     	"firstName":"Carlos",
-    	"lastName":"Diaz",
-    	"nickName":"carlos",
-    	"email":"c.diazadrian@gmail.com",
-    	"password":"1234"
+    	"lastName":"Diazdd",
+    	"nickName":"carloss",
+    	"email":"carloss@gmail.com",
+    	"password":"1234",
+    	"role":"ADMIN"
     }
 parameters: []
 headers:
   - name: Content-Type
     value: application/json
-authentication: {}
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxNywicm9sZSI6IlVTVUFSSU8iLCJpYXQiOjE2Njk2OTM4MzcsImV4cCI6MTY2OTY5NDEzN30.-so7gj6COEfA-73ZD9F42qNSM-5eje5LqnZlWrzH3j0
 metaSortKey: -1669664377725.5
 isPrivate: false
 settingStoreCookies: true

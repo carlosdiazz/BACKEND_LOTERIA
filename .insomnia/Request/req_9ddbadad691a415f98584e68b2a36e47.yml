@@ -1,7 +1,7 @@
 _id: req_9ddbadad691a415f98584e68b2a36e47
 type: Request
 parentId: fld_86c6a40f7116427e89c64a6dd45497a3
-modified: 1669323554595
+modified: 1669688202445
 created: 1668796558863
 url: "{{ _.URL_BASE }}/juego_sql"
 name: getAllJuego
@@ -10,7 +10,9 @@ method: GET
 body: {}
 parameters: []
 headers: []
-authentication: {}
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIihbjbAu2CS_tk
 metaSortKey: -1668698293969
 isPrivate: false
 settingStoreCookies: true

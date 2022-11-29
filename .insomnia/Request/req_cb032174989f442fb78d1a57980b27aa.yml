@@ -1,16 +1,18 @@
 _id: req_cb032174989f442fb78d1a57980b27aa
 type: Request
 parentId: fld_69a1a5bf21ab4f80b6840f2ca89fbb43
-modified: 1669668369288
+modified: 1669693133728
 created: 1669665640975
-url: "{{ _.URL_BASE }}/user/1"
+url: "{{ _.URL_BASE }}/user/16"
 name: deleteUser
 description: ""
 method: DELETE
 body: {}
 parameters: []
 headers: []
-authentication: {}
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2OTY5MjkzMiwiZXhwIjoxNjY5NjkzMjMyfQ.C14hlH2_0ua5alWBWhHOQlDmve0aZG6MKpk3p76J5jA
 metaSortKey: -1669664446545
 isPrivate: false
 settingStoreCookies: true
