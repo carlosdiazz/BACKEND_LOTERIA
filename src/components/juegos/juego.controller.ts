@@ -13,7 +13,6 @@ import { JuegosService } from './juego.service';
 import { CreateJuegoDto, UpdateJuegoDto } from './juego.dto';
 import { ParseObjectIdPipe } from '../common/parseObjectIdMongo.pipe';
 
-
 @ApiTags('Juego')
 @Controller('juego')
 export class JuegoController {

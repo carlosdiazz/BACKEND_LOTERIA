@@ -2,9 +2,9 @@ import { PartialType, ApiProperty } from '@nestjs/swagger';
 import {
   IsString,
   IsNotEmpty,
-  IsNumber,
+  //IsNumber,
   IsUrl,
-  IsPositive,
+  //IsPositive,
 } from 'class-validator';
 
 export class CreateSorteoDto {

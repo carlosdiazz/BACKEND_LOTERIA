@@ -76,6 +76,11 @@ $ npm run start:prod
 - pnpm i --save @nestjs/passport passport passport-local
 - pnpm i --save @nestjs/jwt passport-jwt
 - pnpm i --save-dev @types/passport-jwt
+-  pnpm i -D jest supertest
 
 ### Correrlo en diferentes Entornos
 NODE_ENV=dev pnpm run dev
+
+
+## Verificar el lint
+pnpm run lint

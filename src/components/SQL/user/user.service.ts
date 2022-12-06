@@ -4,7 +4,7 @@ import {
   BadRequestException,
 } from '@nestjs/common';
 import { Repository } from 'typeorm';
-import * as bcrypt from 'bcrypt';
+//import * as bcrypt from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { CreateUserDto, UpdateUserDto } from './user.dto';
@@ -51,13 +51,21 @@ export class UserService {
   async remove(id: number) {
     await this.findOne(id);
     await this.userRepo.delete(id);
-    return { Message: "Usuario Eliminado"}
+    return { Message: 'Usuario Eliminado' };
   }
 
   async findByNickName(nickName: string) {
     const user = await this.userRepo.findOne({
       where: { nickName },
-      select: ['firstName', 'lastName', 'nickName', 'email', 'id', 'password', 'role'],
+      select: [
+        'firstName',
+        'lastName',
+        'nickName',
+        'email',
+        'id',
+        'password',
+        'role',
+      ],
     });
     if (!user) {
       throw new NotFoundException('Este usuario no existe');

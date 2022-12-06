@@ -19,6 +19,6 @@ export class Resultado {
   numeros_ganadores: number[];
 }
 
-export type resultadoType = HydratedDocument<Resultado>
+export type resultadoType = HydratedDocument<Resultado>;
 
 export const ResultadoSchema = SchemaFactory.createForClass(Resultado);

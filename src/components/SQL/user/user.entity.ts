@@ -47,6 +47,6 @@ export class User {
 
   @BeforeInsert()
   async setPassword(password: string) {
-    this.password = await bcrypt.hash(password || this.password, 10)
+    this.password = await bcrypt.hash(password || this.password, 10);
   }
 }
