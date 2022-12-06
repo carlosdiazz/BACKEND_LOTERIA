@@ -84,3 +84,6 @@ NODE_ENV=dev pnpm run dev
 
 ## Verificar el lint
 pnpm run lint
+
+## Aqui corro solo esta prueba
+pnpm run test -- person
