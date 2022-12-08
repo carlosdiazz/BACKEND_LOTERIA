@@ -11,22 +11,22 @@ export class Person {
 
   calcularIMC() {
     const result = Math.round(this.peso / (this.altura * this.altura));
-    if (result < 0) {
+    if (result == Infinity) {
       return null;
     }
-    if (result >= 0 && result < 18) {
+    if (result >= 0 && result <= 18) {
       return 'Esta Bajito';
     }
-    if (result >= 18 && result < 24) {
+    if (result >= 18 && result <= 24) {
       return 'Esta Normal';
     }
-    if (result >= 25 && result < 26) {
+    if (result >= 25 && result <= 26) {
       return 'Esta sobrePeso 1';
     }
-    if (result >= 27 && result < 29) {
+    if (result >= 27 && result <= 29) {
       return 'Esta sobrePeso 2';
     }
-    if (result >= 30 && result < 40) {
+    if (result >= 30 && result <= 40) {
       return 'Esta sobrePeso 3';
     }
     return 'Esta muy sobrepeso';

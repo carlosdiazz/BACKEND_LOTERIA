@@ -16,6 +16,7 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
     });
   }
   async validate(payload: PayloadToken) {
+    //!Aqui puedo ahcer una consulta al usuario para devolver el usuariop
     return payload;
   }
 }

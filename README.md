@@ -87,3 +87,7 @@ pnpm run lint
 
 ## Aqui corro solo esta prueba
 pnpm run test -- person
+
+
+## Cone ste saco un reporte de covertura de mis pruebas
+npm run test -- --coverage
