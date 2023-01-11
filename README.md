@@ -77,6 +77,7 @@ $ npm run start:prod
 - pnpm i --save @nestjs/jwt passport-jwt
 - pnpm i --save-dev @types/passport-jwt
 -  pnpm i -D jest supertest
+-  npm i --save-dev @nestjs/testing
 
 ### Correrlo en diferentes Entornos
 NODE_ENV=dev pnpm run dev

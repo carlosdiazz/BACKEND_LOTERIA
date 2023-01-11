@@ -3,6 +3,7 @@ import {
   ExecutionContext,
   Injectable,
   UnauthorizedException,
+  BadGatewayException,
 } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { Reflector } from '@nestjs/core';
@@ -28,7 +29,7 @@ export class RolesGuard implements CanActivate {
     const isAuth = roles.includes(user.role as Role);
 
     if (!isAuth) {
-      throw new UnauthorizedException('No tiene el rol');
+      throw new BadGatewayException('No tiene el rol');
     }
     return isAuth;
   }

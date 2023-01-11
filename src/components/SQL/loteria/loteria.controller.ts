@@ -22,13 +22,13 @@ import { CreateLoteriaDto, UpdateLoteriaDto } from './loteria.dto';
 import { Public } from '../../../auth/decorators/public.decorator';
 import { Roles } from '../../../auth/decorators/roles.decorator';
 //@UseGuards(AuthGuard('jwt'))
-@UseGuards(JwtAuthGuard, RolesGuard)
+//@UseGuards(JwtAuthGuard, RolesGuard)
 @ApiTags('Loteria')
 @Controller('loteria_sql')
 export class LoteriaController {
   constructor(private readonly loteriaService: LoteriaService) {}
 
-  @Roles(Role.ADMIN)
+  //@Roles(Role.ADMIN)
   @Post()
   @ApiOperation({ summary: 'Crear una Loteria' })
   create(@Body() createLoteriaDto: CreateLoteriaDto) {
