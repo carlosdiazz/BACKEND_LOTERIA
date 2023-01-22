@@ -10,7 +10,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
-//import { AuthGuard } from '@nestjs/passport';
+import { AuthGuard } from '@nestjs/passport';
 
 import { JwtAuthGuard } from '../../../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../../../auth/guards/roles.guard';
@@ -21,8 +21,8 @@ import { LoteriaService } from './loteria.service';
 import { CreateLoteriaDto, UpdateLoteriaDto } from './loteria.dto';
 import { Public } from '../../../auth/decorators/public.decorator';
 import { Roles } from '../../../auth/decorators/roles.decorator';
-//@UseGuards(AuthGuard('jwt'))
-//@UseGuards(JwtAuthGuard, RolesGuard)
+@UseGuards(AuthGuard('jwt'))
+@UseGuards(JwtAuthGuard, RolesGuard)
 @ApiTags('Loteria')
 @Controller('loteria_sql')
 export class LoteriaController {
